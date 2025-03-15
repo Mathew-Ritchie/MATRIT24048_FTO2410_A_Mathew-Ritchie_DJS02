@@ -21,12 +21,12 @@ form.addEventListener("submit", (event) => {
       return;
     }
   }
-  // Scenario 3 - use of 'YOLO' and '+++' on submition should make entire screen be replaced by message and log the call stack to the console.
+  // Scenario 4 - use of 'YOLO' and '+++' on submition should make entire screen be replaced by message and log the call stack to the console.
   if (dividend === "YOLO" && divider === "+++") {
     try {
       throw new Error("Critical Error!");
     } catch (error) {
-      console.error("Wrong inputs used", error.stack);
+      console.error("Invalid inputs used", error.stack);
       document.body.innerHTML = `Something critical went wrong. Please reload the page`;
       return;
     }
